@@ -5,3 +5,9 @@ tsconfig.json
 package.json -- "type": "module",
 ----------------------------------
 npm i express
+npm i -D tsx
+scripts:
+"dev":"tsx watch ./src/server.ts",
+npm run dev
+
+npm i pg
