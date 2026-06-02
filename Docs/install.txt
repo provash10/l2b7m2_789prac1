@@ -1,0 +1,7 @@
+npm init --y
+npm i -D typescript
+npx tsc  --init
+tsconfig.json
+package.json -- "type": "module",
+----------------------------------
+npm i express
