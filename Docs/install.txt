@@ -11,3 +11,6 @@ scripts:
 npm run dev
 
 npm i pg
+------
+create table
+https://www.w3schools.com/postgresql/
