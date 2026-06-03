@@ -37,7 +37,7 @@ initDB();
 // app.get('/', (req : Request, res : Response) => {
 //   res.send('Mission 2 - Be a Node Expert. 7,8,9 Practice !')
 // })
-
+//default
 app.get('/', (req : Request, res : Response) => {
 //   res.send('Mission 2 - Be a Node Expert. 7,8,9 Practice !')
 res.status(200).json({
@@ -46,7 +46,8 @@ res.status(200).json({
 })
 })
 
-app.post('/',async(req: Request, res: Response)=>{
+//Users
+app.post('/api/users',async(req: Request, res: Response)=>{
     // console.log(req.body);
     // const body = req.body; //body destructure
     const {name, email,password,age} = req.body;
@@ -60,16 +61,72 @@ app.post('/',async(req: Request, res: Response)=>{
         // console.log(result);
 
     res.status(201).json({
+        success  : true,
         message : "User Created Successfully",
         data: result.rows[0],
     });
    } catch (error:any) {
+    
     res.status(500).json({
+        success  : false,
         message : error.message,
         error: error,
     });
    }
 });
+
+app.get('/api/users',async(req:Request, res:Response)=>{
+    try {
+        const result = await pool.query(`
+            SELECT * FROM users
+            `)
+            res.status(200).json({
+                success  : true,
+                message : "Users Retrived Successfully",
+                data: result.rows,
+            })
+    } catch (error:any) {
+        res.status(500).json({
+                success  : false,
+                message : error.message,
+                error : error,
+            })
+    }
+})
+
+app.get('/api/users/:id',async(req:Request, res: Response)=>{
+    const { id }= req.params;
+    // console.log(id)
+    try {
+        const result = await pool.query(`
+            SELECT * FROM users WHERE id=$1
+            `,
+        [id],
+    );
+    // console.log(result)
+
+    if(result.rows.length===0){
+        res.status(500).json({
+                success  : false,
+                message : "Users Not Found",
+                data: {},
+            })
+    }
+
+    res.status(200).json({
+                success  : true,
+                message : "Users Retrived Successfully",
+                data: result.rows[0],
+            })
+    
+    } catch (error:any) {
+        res.status(500).json({
+                success  : false,
+                message : error.message,
+                error : error,
+            })
+    }
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
