@@ -24,3 +24,9 @@ app.ts = modules folder (i r mvc)
 
 route >>> controller >>> service >>> interface
 
+============
+profile create from user ==>>>> user_id ===id
+
+==============================================
+bcryptjs >>> npm i bcryptjs
+
