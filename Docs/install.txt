@@ -30,3 +30,8 @@ profile create from user ==>>>> user_id ===id
 ==============================================
 bcryptjs >>> npm i bcryptjs
 
+jwt- npm i jsonwebtoken
+
+//1. check if the user exists
+//2. compare the password
+//3. generate token
