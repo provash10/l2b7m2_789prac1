@@ -2,3 +2,27 @@ Method -> GET Time -> 1780758031381 URL -> /Method -> GET - Time -> 178075808428
 Method -> GET - Time -> 1780758149299 - URL -> /
 
 Method -> GET - Time -> 1780758293436 - URL -> /api/users
+
+Method -> GET - Time -> 1780762097701 - URL -> /api/users/11
+
+Method -> GET - Time -> 1780762312855 - URL -> /api/users
+
+Method -> GET - Time -> 1780762387315 - URL -> /api/users
+
+Method -> GET - Time -> 1780762389071 - URL -> /api/users
+
+Method -> GET - Time -> 1780762653037 - URL -> /api/users/12
+
+Method -> GET - Time -> 1780762748288 - URL -> /api/users/13
+
+Method -> GET - Time -> 1780762789893 - URL -> /api/users
+
+Method -> GET - Time -> 1780762981030 - URL -> /api/users
+
+Method -> GET - Time -> 1780763043121 - URL -> /api/users
+
+Method -> GET - Time -> 1780763224365 - URL -> /api/users
+
+Method -> GET - Time -> 1780763251103 - URL -> /api/users
+
+Method -> GET - Time -> 1780763267701 - URL -> /api/users
