@@ -35,3 +35,11 @@ jwt- npm i jsonwebtoken
 //1. check if the user exists
 //2. compare the password
 //3. generate token
+
+==================9
+9-1 Understanding express middleware
+google -- express middleware
+logger.txt create 
+
+------------------
+
