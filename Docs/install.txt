@@ -45,3 +45,19 @@ logger.txt create
 9-2 Creation auth middleware
 src- create middleware folder
 
+9-3
+auth.ts>>>
+1. check if the token exists
+2. Verify the token
+3. Find the user into database
+4. if the user active or not
+
+9-4
+express typescript namespace 
+-documentation
+dev community -->
+https://dev.to/kwabenberko/extend-express-s-request-object-with-typescript-declaration-merging-1nn5
+
+
+
+
